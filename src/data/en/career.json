@@ -1,27 +1,110 @@
 [
   {
-    "company": "Demo Company",
-    "role": "Lead Software Engineer",
-    "period": "Oct 2025 - Present",
+    "company": "Itbid",
+    "url": "https://itbid.com",
+    "role": "Software Architect &amp; Product Owner",
+    "period": "Sep 2014 - Present",
     "type": "Full time job",
-    "description": "Leading cross-platform application development using Flutter and Python FastAPI. Focused on scalable system design, API integrations, and team leadership.",
-    "skills": ["Team Leadership", "System Architecture", "Flutter", "FastAPI"]
+    "description": "Architected high-throughput distributed systems, event-driven integration middleware (AVI-I with RabbitMQ), and AI-driven document verification platforms (Orion &amp; AVI-A). Managed cross-timezone engineering teams via 100% asynchronous workflows.",
+    "skills": [
+      "Software Architecture",
+      "System Design",
+      "Event-Driven Architecture",
+      "RabbitMQ",
+      "PHP / Symfony",
+      "Node.js",
+      "Vue.js",
+      "AI / OCR",
+      "PHPUnit",
+      "PHPStan",
+      "Docker"
+    ]
   },
   {
-    "company": "Demo Solutions Ltd",
-    "url": "https://example.com",
-    "role": "Full-stack Developer",
-    "period": "Sep 2023 - Sep 2025",
-    "type": "Full time job",
-    "description": "Specializing in Business Research Methods and Strategic HRM. Applying analytical frameworks to human capital management.",
-    "skills": ["React", "Node.js", "PostgreSQL", "Docker"]
+    "company": "Trendix",
+    "role": "CTO &amp; Co-Founder",
+    "period": "Jun 2015 - Jun 2021",
+    "type": "Co-Founder",
+    "description": "Directed technical strategy, software delivery, and system architecture for 40+ client projects. Architected operational software that enabled a primary client to scale annual revenue from €50K to €1M within 12 months.",
+    "skills": [
+      "Technical Leadership",
+      "SaaS Architecture",
+      "PHP / Symfony",
+      "WordPress",
+      "Vue.js",
+      "Node.js",
+      "Docker"
+    ]
   },
   {
-    "company": "Demo University of Tech",
-    "role": "BSc in Computer Science",
-    "period": "Jun 2020 - Jun 2024",
+    "company": "LanguageBookings",
+    "role": "Senior Full-Stack Developer",
+    "period": "Mar 2013 - May 2014",
+    "type": "Full time job",
+    "description": "Maintained and developed features for a global language course booking platform handling international payments and user transactions. Refactored legacy PHP codebases and optimized database performance.",
+    "skills": [
+      "PHP",
+      "Full-Stack Development",
+      "MySQL",
+      "JavaScript",
+      "REST APIs",
+      "Database Optimization"
+    ]
+  },
+  {
+    "company": "Difusión Gráfica",
+    "role": "CTO &amp; Lead Developer",
+    "period": "Dec 2008 - Nov 2011",
+    "type": "Full time job",
+    "description": "Managed web servers, network infrastructure, and client web application development, building custom tools to streamline web project delivery.",
+    "skills": [
+      "Web Development",
+      "PHP",
+      "Linux Administration",
+      "Server Maintenance",
+      "System Integration"
+    ]
+  },
+  {
+    "company": "Livesoft",
+    "role": "CTO &amp; Co-Founder",
+    "period": "Mar 2006 - Mar 2008",
+    "type": "Co-Founder",
+    "description": "Cofounded IT consultancy firm specializing in custom web applications and rapid application development, including biometric staff tracking systems (Digitouch).",
+    "skills": [
+      "Entrepreneurship",
+      "Software Development",
+      "Biometrics",
+      "PHP",
+      "C++",
+      "System Architecture"
+    ]
+  },
+  {
+    "company": "Universidad de Cádiz (UCA)",
+    "role": "B.Sc. in Computer Engineering (Ingeniería Técnica en Informática de Gestión)",
+    "period": "Sep 2002 - Jun 2007",
     "type": "Student",
-    "description": "Graduated with honors. Focused on data structures, algorithm optimization, software architecture, and database systems.",
-    "skills": ["Data Structures", "Algorithms", "OOP", "DBMS"]
+    "description": "Degree in Computer Engineering specializing in Software Architecture, Database Systems, Data Structures, OOP, and Web Development.",
+    "skills": [
+      "Software Architecture",
+      "Data Structures",
+      "Database Systems",
+      "OOP",
+      "PHP",
+      "MySQL",
+      "C++"
+    ]
+  },
+  {
+    "company": "Centro Superior de Lenguas Modernas (CSLM)",
+    "role": "Professional English Certification (Upper Intermediate - B2 Level)",
+    "period": "2006",
+    "type": "Student",
+    "description": "Upper Intermediate B2 English Language certification for professional and technical communication.",
+    "skills": [
+      "English B2",
+      "Technical Communication"
+    ]
   }
 ]

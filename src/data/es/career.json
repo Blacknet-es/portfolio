@@ -1,42 +1,110 @@
 [
   {
-    "company": "Demo Company",
-    "role": "Ingeniero de Software Lead",
-    "period": "Oct 2025 - Presente",
-    "type": "Full time job",
-    "description": "Liderando el desarrollo de aplicaciones multiplataforma con Flutter y Python FastAPI. Enfocado en diseño de sistemas escalables, integración de APIs y liderazgo técnico de equipo.",
+    "company": "Itbid",
+    "url": "https://itbid.com",
+    "role": "Arquitecto de Software y Product Owner",
+    "period": "Sep 2014 - Presente",
+    "type": "Trabajo a tiempo completo",
+    "description": "Diseño y arquitectura de sistemas distribuidos de alto rendimiento, middleware de integración orientado a eventos (AVI-I con RabbitMQ) y plataformas de verificación documental impulsadas por IA (Orion y AVI-A). Gestión de equipos de ingeniería en múltiples zonas horarias mediante flujos de trabajo 100% asíncronos.",
     "skills": [
-      "Liderazgo de Equipos",
-      "Arquitectura de Sistemas",
-      "Flutter",
-      "FastAPI"
-    ]
-  },
-  {
-    "company": "Demo Solutions Ltd",
-    "url": "https://example.com",
-    "role": "Desarrollador Full-stack",
-    "period": "Sep 2023 - Sep 2025",
-    "type": "Full time job",
-    "description": "Especializado en métodos de investigación empresarial y gestión estratégica de RRHH. Aplicación de marcos analíticos a la gestión de capital humano.",
-    "skills": [
-      "React",
+      "Arquitectura de Software",
+      "Diseño de Sistemas",
+      "Arquitectura Orientada a Eventos",
+      "RabbitMQ",
+      "PHP / Symfony",
       "Node.js",
-      "PostgreSQL",
+      "Vue.js",
+      "IA / OCR",
+      "PHPUnit",
+      "PHPStan",
       "Docker"
     ]
   },
   {
-    "company": "Demo University of Tech",
-    "role": "Grado en Ingeniería Informática",
-    "period": "Jun 2020 - Jun 2024",
-    "type": "Student",
-    "description": "Graduado con honores. Enfocado en estructuras de datos, optimización de algoritmos, arquitectura de software y sistemas de bases de datos.",
+    "company": "Trendix",
+    "role": "CTO y Cofundador",
+    "period": "Jun 2015 - Jun 2021",
+    "type": "Cofundador",
+    "description": "Dirección de la estrategia técnica, entrega de software y arquitectura de sistemas para más de 40 proyectos de clientes. Diseñó el software operacional que permitió a un cliente principal escalar sus ingresos anuales de 50.000 € a 1.000.000 € en 12 meses.",
     "skills": [
+      "Liderazgo Técnico",
+      "Arquitectura SaaS",
+      "PHP / Symfony",
+      "WordPress",
+      "Vue.js",
+      "Node.js",
+      "Docker"
+    ]
+  },
+  {
+    "company": "LanguageBookings",
+    "role": "Desarrollador Full-Stack Senior",
+    "period": "Mar 2013 - May 2014",
+    "type": "Trabajo a tiempo completo",
+    "description": "Mantenimiento y desarrollo de funcionalidades para una plataforma global de reserva de cursos de idiomas que gestiona pagos internacionales y transacciones de usuarios. Refactorización de código legado en PHP y optimización de bases de datos.",
+    "skills": [
+      "PHP",
+      "Desarrollo Full-Stack",
+      "MySQL",
+      "JavaScript",
+      "APIs REST",
+      "Optimización de Bases de Datos"
+    ]
+  },
+  {
+    "company": "Difusión Gráfica",
+    "role": "CTO y Desarrollador Principal",
+    "period": "Dic 2008 - Nov 2011",
+    "type": "Trabajo a tiempo completo",
+    "description": "Gestión de servidores web, infraestructura de red y desarrollo de aplicaciones web para clientes, creando herramientas a medida para agilizar la entrega de proyectos web.",
+    "skills": [
+      "Desarrollo Web",
+      "PHP",
+      "Administración de Linux",
+      "Mantenimiento de Servidores",
+      "Integración de Sistemas"
+    ]
+  },
+  {
+    "company": "Livesoft",
+    "role": "CTO y Cofundador",
+    "period": "Mar 2006 - Mar 2008",
+    "type": "Cofundador",
+    "description": "Cofundó una empresa de consultoría TI especializada en aplicaciones web a medida y desarrollo rápido de aplicaciones, incluyendo sistemas biométricos de control de presencia (Digitouch).",
+    "skills": [
+      "Emprendimiento",
+      "Desarrollo de Software",
+      "Biometría",
+      "PHP",
+      "C++",
+      "Arquitectura de Sistemas"
+    ]
+  },
+  {
+    "company": "Universidad de Cádiz (UCA)",
+    "role": "Ingeniería Técnica en Informática de Gestión",
+    "period": "Sep 2002 - Jun 2007",
+    "type": "Estudiante",
+    "description": "Titulación en Ingeniería Informática especializada en Arquitectura de Software, Sistemas de Bases de Datos, Estructuras de Datos, POO y Desarrollo Web.",
+    "skills": [
+      "Arquitectura de Software",
       "Estructuras de Datos",
-      "Algoritmos",
+      "Sistemas de Bases de Datos",
       "POO",
-      "BBDD"
+      "PHP",
+      "MySQL",
+      "C++"
+    ]
+  },
+  {
+    "company": "Centro Superior de Lenguas Modernas (CSLM)",
+    "role": "Certificación Profesional de Inglés (Nivel B2 - Intermedio Alto)",
+    "period": "2006",
+    "type": "Estudiante",
+    "description": "Certificación de nivel de inglés B2 (Intermedio Alto) orientada a la comunicación profesional y técnica.",
+    "skills": [
+      "Inglés B2",
+      "Comunicación Técnica"
     ]
   }
 ]
