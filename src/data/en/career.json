@@ -2,10 +2,10 @@
   {
     "company": "Itbid",
     "url": "https://itbid.com",
-    "role": "Software Architect &amp; Product Owner",
+    "role": "Software Architect & Product Owner",
     "period": "Sep 2014 - Present",
     "type": "Full time job",
-    "description": "Architected high-throughput distributed systems, event-driven integration middleware (AVI-I with RabbitMQ), and AI-driven document verification platforms (Orion &amp; AVI-A). Managed cross-timezone engineering teams via 100% asynchronous workflows.",
+    "description": "Architected high-throughput distributed systems, event-driven integration middleware (AVI-I with RabbitMQ), and AI-driven document verification platforms (Orion & AVI-A). Managed cross-timezone engineering teams via 100% asynchronous workflows.",
     "skills": [
       "Software Architecture",
       "System Design",
@@ -22,7 +22,7 @@
   },
   {
     "company": "Trendix",
-    "role": "CTO &amp; Co-Founder",
+    "role": "CTO & Co-Founder",
     "period": "Jun 2015 - Jun 2021",
     "type": "Co-Founder",
     "description": "Directed technical strategy, software delivery, and system architecture for 40+ client projects. Architected operational software that enabled a primary client to scale annual revenue from €50K to €1M within 12 months.",
@@ -53,7 +53,7 @@
   },
   {
     "company": "Difusión Gráfica",
-    "role": "CTO &amp; Lead Developer",
+    "role": "CTO & Lead Developer",
     "period": "Dec 2008 - Nov 2011",
     "type": "Full time job",
     "description": "Managed web servers, network infrastructure, and client web application development, building custom tools to streamline web project delivery.",
@@ -67,7 +67,7 @@
   },
   {
     "company": "Livesoft",
-    "role": "CTO &amp; Co-Founder",
+    "role": "CTO & Co-Founder",
     "period": "Mar 2006 - Mar 2008",
     "type": "Co-Founder",
     "description": "Cofounded IT consultancy firm specializing in custom web applications and rapid application development, including biometric staff tracking systems (Digitouch).",

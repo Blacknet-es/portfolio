@@ -1,20 +1,103 @@
 [
   {
-    "title": "Awesome Website",
-    "description": "A high-performance, SEO-optimized web application built with modern frameworks to showcase technical expertise.",
-    "images": ["astro-01.webp", "astro-02.jpeg"],
-    "tech": ["Astro", "Tailwind"],
-    "platforms": ["web"],
-    "link": "https://astro.build/themes/details/career-portfolio-data-driven-astro-ssg/",
-    "category": "Published Website"
+    "title": "AVI-I: Event-Driven Integration Middleware",
+    "description": "Protocol-agnostic asynchronous integration engine powered by RabbitMQ. Features a custom normalization engine that routes data securely across heterogeneous enterprise platforms, processing 2M+ purchase transactions per minute.",
+    "images": [
+      "avi-i-01.webp",
+      "avi-i-02.webp"
+    ],
+    "tech": [
+      "RabbitMQ",
+      "PHP / Symfony",
+      "Node.js",
+      "Event-Driven Architecture",
+      "Docker"
+    ],
+    "platforms": [
+      "web",
+      "cloud"
+    ],
+    "link": "https://itbid.com/tecnologia-itbid/",
+    "category": "Enterprise Architecture"
   },
   {
-    "title": "Demo Mobile App",
-    "description": "A high-performance mobile application built with modern frameworks to showcase technical expertise.",
-    "images": ["astro-02.jpeg", "#"],
-    "tech": ["Flutter", "Dart", "REST API"],
-    "platforms": ["apple-ios", "android"],
-    "link": "https://github.com/nbakh16/career-portfolio-template",
-    "category": "Hobby"
+    "title": "Orion: AI & OCR Document Verification System",
+    "description": "AI-driven document validation and fraud detection platform. Integrates an automated OCR pipeline capable of processing 10,000+ invoices per minute for vendor verification, risk detection, and automatic purchase order matching.",
+    "images": [
+      "orion-01.webp",
+      "orion-02.webp"
+    ],
+    "tech": [
+      "AI / OCR",
+      "Computer Vision",
+      "Node.js",
+      "PHP",
+      "Docker"
+    ],
+    "platforms": [
+      "web",
+      "cloud"
+    ],
+    "link": "https://itbid.com/funcionalidades-ia/",
+    "category": "AI & Automation"
+  },
+  {
+    "title": "AVI-A: eProcurement AI Assistant",
+    "description": "Specialized AI assistant for enterprise procurement teams. Automates risk analysis, offer comparisons, clause scenario generation, and contract validation to accelerate purchasing decisions.",
+    "images": [
+      "avia-01.webp",
+      "avia-02.webp"
+    ],
+    "tech": [
+      "AI Agents",
+      "LLM / NLP",
+      "Node.js",
+      "REST API",
+      "Vue.js"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "link": "https://itbid.com/avi-a/",
+    "category": "AI & Automation"
+  },
+  {
+    "title": "Trendix E-Commerce & Operational Engine",
+    "description": "High-throughput operational software and decoupled SaaS architecture engineered for scale. Eliminated key business bottlenecks, enabling a primary client to scale annual revenue from €50K to €1M within 12 months.",
+    "images": [
+      "trendix-01.webp",
+      "trendix-02.webp"
+    ],
+    "tech": [
+      "PHP / Symfony",
+      "Vue.js",
+      "Node.js",
+      "Docker",
+      "WordPress Core"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "link": "#",
+    "category": "SaaS & E-Commerce"
+  },
+  {
+    "title": "Digitouch: Biometric Attendance System",
+    "description": "Desktop and biometric hardware integration software designed for automated staff attendance and fingerprint tracking, deployed across regional hospital networks.",
+    "images": [
+      "digitouch-01.webp",
+      "#"
+    ],
+    "tech": [
+      "C++",
+      "PHP",
+      "MySQL",
+      "Biometrics / Hardware Integration"
+    ],
+    "platforms": [
+      "windows"
+    ],
+    "link": "#",
+    "category": "Biometrics & Hardware"
   }
 ]

@@ -1,38 +1,103 @@
 [
   {
-    "title": "Sitio Web Increíble",
-    "description": "Una aplicación web de alto rendimiento y optimizada para SEO creada con frameworks modernos para demostrar experiencia técnica.",
+    "title": "AVI-I: Middleware de Integración Orientado a Eventos",
+    "description": "Motor de integración asíncrono y agnóstico de protocolo sobre RabbitMQ. Cuenta con un motor de normalización a medida para enrutar datos de forma segura entre plataformas empresariales heterogéneas, procesando más de 2M de transacciones/minuto.",
     "images": [
-      "astro-01.webp",
-      "astro-02.jpeg"
+      "avi-i-01.webp",
+      "avi-i-02.webp"
     ],
     "tech": [
-      "Astro",
-      "Tailwind"
+      "RabbitMQ",
+      "PHP / Symfony",
+      "Node.js",
+      "Arquitectura Orientada a Eventos",
+      "Docker"
+    ],
+    "platforms": [
+      "web",
+      "cloud"
+    ],
+    "link": "https://itbid.com/tecnologia-itbid/",
+    "category": "Arquitectura Empresarial"
+  },
+  {
+    "title": "Orion: Sistema de Verificación Documental con IA y OCR",
+    "description": "Plataforma de detección de fraude y validación documental impulsada por IA. Integra un pipeline OCR automatizado capaz de procesar más de 10.000 facturas por minuto para validación de proveedores y conciliación de pedidos.",
+    "images": [
+      "orion-01.webp",
+      "orion-02.webp"
+    ],
+    "tech": [
+      "IA / OCR",
+      "Visión por Computador",
+      "Node.js",
+      "PHP",
+      "Docker"
+    ],
+    "platforms": [
+      "web",
+      "cloud"
+    ],
+    "link": "https://itbid.com/funcionalidades-ia/",
+    "category": "IA y Automatización"
+  },
+  {
+    "title": "AVI-A: Asistente IA para eProcurement",
+    "description": "Agente conversacional e inteligente especializado en compras corporativas. Automatiza el análisis de riesgos, la comparación de ofertas, la generación de escenarios de cláusulas y la verificación de contratos.",
+    "images": [
+      "avia-01.webp",
+      "avia-02.webp"
+    ],
+    "tech": [
+      "Agentes IA",
+      "LLM / NLP",
+      "Node.js",
+      "API REST",
+      "Vue.js"
     ],
     "platforms": [
       "web"
     ],
-    "link": "https://astro.build/themes/details/career-portfolio-data-driven-astro-ssg/",
-    "category": "Published Website"
+    "link": "https://itbid.com/avi-a/",
+    "category": "IA y Automatización"
   },
   {
-    "title": "App Móvil Demo",
-    "description": "Una aplicación móvil de alto rendimiento creada con frameworks modernos para demostrar experiencia técnica.",
+    "title": "Motor Operacional y SaaS Trendix",
+    "description": "Software operacional de alto rendimiento y arquitectura desacoplada para SaaS. Eliminó cuellos de botella críticos, permitiendo a un cliente principal escalar sus ingresos anuales de 50.000 € a 1.000.000 € en 12 meses.",
     "images": [
-      "astro-02.jpeg",
+      "trendix-01.webp",
+      "trendix-02.webp"
+    ],
+    "tech": [
+      "PHP / Symfony",
+      "Vue.js",
+      "Node.js",
+      "Docker",
+      "WordPress Core"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "link": "#",
+    "category": "SaaS y Comercio Electrónico"
+  },
+  {
+    "title": "Digitouch: Control Biométrico de Presencia",
+    "description": "Software de escritorio e integración con hardware biométrico para control de asistencia mediante huella dactilar, implantado en redes hospitalarias regionales.",
+    "images": [
+      "digitouch-01.webp",
       "#"
     ],
     "tech": [
-      "Flutter",
-      "Dart",
-      "REST API"
+      "C++",
+      "PHP",
+      "MySQL",
+      "Integración de Hardware Biométrico"
     ],
     "platforms": [
-      "apple-ios",
-      "android"
+      "windows"
     ],
-    "link": "https://github.com/nbakh16/career-portfolio-template",
-    "category": "Hobby"
+    "link": "#",
+    "category": "Biometría y Hardware"
   }
 ]

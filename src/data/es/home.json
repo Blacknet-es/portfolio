@@ -1,87 +1,87 @@
 {
-  "name": "John Doe",
-  "photoUrl": "favicon.svg",
-  "location": "Ciudad, País",
-  "availability": "Disponible para trabajar",
-  "description": "Una breve y convincente introducción sobre quién eres y qué haces. Menciona tu filosofía principal, tu pasión por crear productos digitales y tu motivación para construir soluciones eficientes y de alto impacto.",
-  "descriptionHtml": "Una breve y convincente introducción sobre quién eres y qué haces. Menciona tu <span class='text-accent font-bold'>filosofía</span> principal, tu pasión por crear productos digitales y tu motivación para construir soluciones <span class='text-accent font-bold'>eficientes</span> y de <span class='text-accent font-bold'>alto impacto</span>.",
-  "webpageTitle": "John Doe | Ingeniero de Software Lead",
-  "resumeUrl": "https://example-files.online-convert.com/document/pdf/example.pdf",
-  "_seo_comment": "Campos SEO — actualiza estos datos junto con tu información personal para mejor visibilidad en motores de búsqueda.",
-  "jobTitle": "Ingeniero de Software Lead",
-  "keywords": "John Doe, ingeniero de software, Flutter, FastAPI, desarrollo móvil, portafolio",
-  "siteUrl": "https://your-domain.com",
+  "name": "Jesús Muriel",
+  "photoUrl": "avatar.webp",
+  "location": "España (UTC+1 / CET)",
+  "availability": "Disponible para Contratación B2B o jornada completa",
+  "description": "Arquitecto de Software Senior con más de 20 años de experiencia diseñando sistemas distribuidos de alto rendimiento, arquitecturas orientadas a eventos y plataformas de verificación documental impulsadas por IA. Trayectoria demostrada en procesamiento de 2M+ transacciones/minuto y liderazgo de equipos de ingeniería internacionales mediante metodologías 100% asíncronas.",
+  "descriptionHtml": "Arquitecto de Software Senior con más de 20 años de experiencia diseñando <span>sistemas distribuidos de alto rendimiento</span>, <span>arquitecturas orientadas a eventos</span> y soluciones de IA. Especializado en colas de mensajes con <span>2M+ transacciones/min</span> y liderazgo de equipos internacionales en entornos <span>100% async-first</span>.",
+  "webpageTitle": "Jesús Muriel | Arquitecto de Software Principal e Ingeniero de Sistemas",
+  "resumeUrl": "/CV_Jesus_Muriel_Senior_Software_Architect.pdf",
+  "_seo_comment": "Campos SEO — actualízalos junto a tu información personal para maximizar visibilidad en buscadores.",
+  "jobTitle": "Arquitecto de Software Principal e Ingeniero de Sistemas",
+  "keywords": "Jesús Muriel, Arquitecto de Software, Ingeniero de Sistemas, Arquitectura Orientada a Eventos, RabbitMQ, PHP, Symfony, Node.js, IA, OCR, Contractor Remoto Asíncrono",
+  "siteUrl": "https://jesusmuriel.dev",
   "lang": "es",
   "twitterHandle": "",
-  "ogImageUrl": "/placeholder.jpeg",
-  "_comment": "Agrega tus enlaces sociales abajo. Deja 'url' vacío para ocultar el icono. Configura 'showInContact' a true o false para controlar si aparece en la sección de Contacto.",
+  "ogImageUrl": "/og-image.jpg",
+  "_comment": "Añade tus redes sociales abajo. Deja 'url' vacío para ocultar el icono. Define 'showInContact' como true o false.",
   "socials": [
     {
       "name": "GitHub",
-      "url": "https://github.com/[YOUR_USER_NAME]",
+      "url": "https://github.com/Blacknet-es",
       "icon": "mdi:github",
       "label": "Ver Perfil",
       "showInContact": true
     },
     {
       "name": "LinkedIn",
-      "url": "https://linkedin.com/in/[YOUR_USER_NAME]",
+      "url": "https://www.linkedin.com/in/jesusmurielphp/",
       "icon": "mdi:linkedin",
       "label": "Conectar",
       "showInContact": true
     },
     {
       "name": "Leetcode",
-      "url": "#",
+      "url": "",
       "icon": "devicon-plain:leetcode",
       "label": "Ver Perfil",
       "showInContact": false
     },
     {
       "name": "Behance",
-      "url": "#",
+      "url": "",
       "icon": "devicon-plain:behance",
       "label": "Ver Perfil",
       "showInContact": false
     },
     {
       "name": "Email",
-      "url": "mailto:your-mail@example.com",
+      "url": "mailto:jesus.murielprieto@gmail.com",
       "icon": "mdi:email",
       "label": "Enviar Email",
       "showInContact": true
     },
     {
       "name": "WhatsApp",
-      "url": "https://wa.me/[YOUR_WHATSAPP_NUMBER]",
+      "url": "https://wa.me/34670886004",
       "icon": "mdi:whatsapp",
       "label": "Enviar Mensaje",
       "showInContact": true
     },
     {
       "name": "Facebook",
-      "url": "#",
+      "url": "",
       "icon": "mdi:facebook",
       "label": "Ver Perfil",
       "showInContact": false
     },
     {
       "name": "Messenger",
-      "url": "#",
+      "url": "",
       "icon": "mdi:facebook-messenger",
       "label": "Enviar Mensaje",
-      "showInContact": true
+      "showInContact": false
     },
     {
       "name": "Instagram",
-      "url": "#",
+      "url": "",
       "icon": "mdi:instagram",
       "label": "Ver Perfil",
       "showInContact": false
     },
     {
       "name": "Twitter",
-      "url": "#",
+      "url": "",
       "icon": "mdi:twitter",
       "label": "Ver Perfil",
       "showInContact": false

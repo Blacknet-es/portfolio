@@ -22,5 +22,8 @@
     "astro-icon": "^1.1.5",
     "tailwindcss": "^4.2.0",
     "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@iconify-json/simple-icons": "^1.2.99"
   }
 }

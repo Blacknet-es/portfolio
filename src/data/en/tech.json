@@ -1,33 +1,158 @@
 {
   "categories": [
     {
-      "title": "Frontend",
+      "title": "Backend & Architecture",
       "skills": [
-        { "name": "React", "level": 3, "icon": "skill-icons:react-dark" },
-        { "name": "Next.js", "level": 2, "icon": "skill-icons:nextjs-dark" },
-        { "name": "TypeScript", "level": 3, "icon": "skill-icons:typescript" },
-        { "name": "JavaScript", "level": 3, "icon": "skill-icons:javascript" },
-        { "name": "Astro", "level": 2, "icon": "skill-icons:astro" },
-        { "name": "HTML", "level": 3, "icon": "skill-icons:html" },
-        { "name": "CSS", "level": 3, "icon": "skill-icons:css" },
-        { "name": "Tailwind CSS", "level": 2, "icon": "skill-icons:tailwindcss-dark" }
+        {
+          "name": "PHP",
+          "level": 3,
+          "icon": "skill-icons:php-dark"
+        },
+        {
+          "name": "Symfony",
+          "level": 3,
+          "icon": "skill-icons:symfony-dark"
+        },
+        {
+          "name": "Node.js",
+          "level": 3,
+          "icon": "skill-icons:nodejs-dark"
+        },
+        {
+          "name": "RabbitMQ",
+          "level": 3,
+          "icon": "skill-icons:rabbitmq-dark"
+        },
+        {
+          "name": "WordPress Core/Plugins",
+          "level": 3,
+          "icon": "skill-icons:wordpress"
+        },
+        {
+          "name": "Express",
+          "level": 2,
+          "icon": "skill-icons:expressjs-dark"
+        },
+        {
+          "name": "Python",
+          "level": 2,
+          "icon": "skill-icons:python-dark"
+        }
       ]
     },
     {
-      "title": "Backend & Tools",
+      "title": "Frontend",
       "skills": [
-        { "name": "Node.js", "level": 3, "icon": "skill-icons:nodejs-dark" },
-        { "name": "Express", "level": 2, "icon": "skill-icons:expressjs-dark" },
-        { "name": "Docker", "level": 2, "icon": "skill-icons:docker" },
-        { "name": "Git", "level": 3, "icon": "skill-icons:git" }
+        {
+          "name": "JavaScript",
+          "level": 3,
+          "icon": "skill-icons:javascript"
+        },
+        {
+          "name": "TypeScript",
+          "level": 3,
+          "icon": "skill-icons:typescript"
+        },
+        {
+          "name": "Vue.js",
+          "level": 3,
+          "icon": "skill-icons:vuejs-dark"
+        },
+        {
+          "name": "HTML5",
+          "level": 3,
+          "icon": "skill-icons:html"
+        },
+        {
+          "name": "CSS3",
+          "level": 3,
+          "icon": "skill-icons:css"
+        },
+        {
+          "name": "Astro",
+          "level": 2,
+          "icon": "skill-icons:astro"
+        },
+        {
+          "name": "Tailwind CSS",
+          "level": 2,
+          "icon": "skill-icons:tailwindcss-dark"
+        },
+        {
+          "name": "React",
+          "level": 2,
+          "icon": "skill-icons:react-dark"
+        }
+      ]
+    },
+    {
+      "title": "DevOps & Cloud",
+      "skills": [
+        {
+          "name": "Docker",
+          "level": 3,
+          "icon": "skill-icons:docker"
+        },
+        {
+          "name": "Git",
+          "level": 3,
+          "icon": "skill-icons:git"
+        },
+        {
+          "name": "Linux",
+          "level": 3,
+          "icon": "skill-icons:linux-dark"
+        },
+        {
+          "name": "AWS",
+          "level": 2,
+          "icon": "skill-icons:aws-dark"
+        },
+        {
+          "name": "Bitbucket Pipelines",
+          "level": 2,
+          "icon": "skill-icons:bitbucket-dark"
+        }
       ]
     },
     {
       "title": "Database",
       "skills": [
-        { "name": "PostgreSQL", "level": 2, "icon": "skill-icons:postgresql-dark" },
-        { "name": "MongoDB", "level": 2, "icon": "skill-icons:mongodb" },
-        { "name": "SQLite", "level": 3, "icon": "skill-icons:sqlite" }
+        {
+          "name": "MySQL",
+          "level": 3,
+          "icon": "skill-icons:mysql-dark"
+        },
+        {
+          "name": "PostgreSQL",
+          "level": 2,
+          "icon": "skill-icons:postgresql-dark"
+        },
+        {
+          "name": "MongoDB",
+          "level": 2,
+          "icon": "skill-icons:mongodb"
+        },
+        {
+          "name": "SQLite",
+          "level": 2,
+          "icon": "skill-icons:sqlite"
+        }
+      ]
+    },
+    {
+      "title": "AI & Quality",
+      "skills": [
+        {
+          "name": "OpenAI API",
+          "level": 3,
+          "icon": "simple-icons:openai"
+        },
+        {
+          "name": "PHPUnit / Static Analysis",
+          "level": 3,
+          "icon": "skill-icons:php-dark"
+        }
       ]
     }
   ]
