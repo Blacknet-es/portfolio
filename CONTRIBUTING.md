@@ -1,4 +1,4 @@
-## Contributions are Welcome & Appreciated! 
+## Contributions are Welcome & Appreciated! :D
 
 Every contribution matters
 — fixing a bug, adding a feature, improving the UI/Animation, optimizing performance, enhancing accessibility.
