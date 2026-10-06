@@ -1,10 +1,26 @@
 ---
 import { Icon } from 'astro-icon/components';
-const { project } = Astro.props;
 import { Image } from 'astro:assets';
 import { resolveAssetImage } from '../utils/images';
+import { useTranslations } from '../i18n/utils';
+import type { Lang } from '../i18n/ui';
 
-// Map through the array of image strings from project JSON
+interface Props {
+  project: {
+    title: string;
+    description: string;
+    images: string[];
+    tech: string[];
+    platforms: string[];
+    link: string;
+    category: string;
+  };
+  lang?: Lang;
+}
+
+const { project, lang = 'es' } = Astro.props;
+const t = useTranslations(lang);
+
 const optimizedImages = await Promise.all(
   project.images.map(async (imgName: string) => {
     return await resolveAssetImage(imgName);
@@ -17,7 +33,9 @@ const isSlider = validImages.length > 1;
 const categoryColors: Record<string, string> = {
   'Professional Project': 'text-sky-400 bg-sky-400/10 border-sky-400/20',
   'Published App':        'text-emerald-400 bg-emerald-400/10 border-emerald-400/20',
+  'Published Website':    'text-emerald-400 bg-emerald-400/10 border-emerald-400/20',
   'Game Dev / Hobby':     'text-violet-400 bg-violet-400/10 border-violet-400/20',
+  'Hobby':                'text-violet-400 bg-violet-400/10 border-violet-400/20',
 };
 const categoryClass = categoryColors[project.category] ?? 'text-accent bg-accent/10 border-accent/20';
 
@@ -116,7 +134,7 @@ const platformIconMap: Record<string, string> = {
       target="_blank"
       class="mt-1 flex items-center justify-center gap-2 w-full py-2 rounded-lg border border-accent/20 text-accent/70 hover:text-accent hover:border-accent/60 hover:bg-accent/5 transition-all duration-300 text-xs font-body font-semibold tracking-wide"
     >
-      View Project
+      {t('projects.viewProject')}
       <Icon name="mdi:arrow-right" class="w-3.5 h-3.5" />
     </a>
   </div>
@@ -188,7 +206,6 @@ const platformIconMap: Record<string, string> = {
     transform: translateY(0) !important;
   }
 
-  /* Slider dot pill transition */
   .slider-dot {
     transition: width 0.4s ease, background-color 0.4s ease;
   }

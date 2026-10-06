@@ -1,6 +1,8 @@
 ---
 import { Icon } from 'astro-icon/components';
-import localTechData from '../data/tech.json';
+import { useTranslations } from '../i18n/utils';
+import { getPortfolioData } from '../utils/data';
+import type { Lang } from '../i18n/ui';
 
 interface Skill {
   name: string;
@@ -13,19 +15,35 @@ interface Category {
   skills: Skill[];
 }
 
+interface TechData {
+  categories: Category[];
+}
+
+interface Props {
+  lang?: Lang;
+  data?: TechData;
+}
+
+const { lang = 'es', data: propData } = Astro.props;
+const t = useTranslations(lang);
+
 const BASE_URL = import.meta.env.PUBLIC_API_BASE_URL;
 let categories: Category[];
 
-try {
-  if (BASE_URL) {
-    const response = await fetch(`${BASE_URL}/tech`);
-    const data = await response.json();
-    categories = data.categories;
-  } else {
-    categories = localTechData.categories;
+if (propData && propData.categories) {
+  categories = propData.categories;
+} else {
+  try {
+    if (BASE_URL) {
+      const response = await fetch(`${BASE_URL}/tech?lang=${lang}`);
+      const data = await response.json();
+      categories = data.categories;
+    } else {
+      categories = getPortfolioData(lang).tech.categories;
+    }
+  } catch {
+    categories = getPortfolioData(lang).tech.categories;
   }
-} catch {
-  categories = localTechData.categories;
 }
 ---
 
@@ -34,18 +52,18 @@ try {
     <div class="tech-header flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
       <div>
         <h2 class="text-3xl md:text-4xl font-heading font-bold text-maintext mb-2 flex items-center gap-4">
-          <span class="text-accent">/</span> Skills & Tools
+          <span class="text-accent">/</span> {t('tech.title')}
         </h2>
         <p class="text-subtext font-body text-sm max-w-md">
-          Breakdown of my skills and tools, categorized by domain and proficiency
+          {t('tech.subtitle')}
         </p>
       </div>
 
       <div class="flex flex-wrap gap-4 p-3 rounded-xl bg-accent/5 border border-accent/10 backdrop-blur-sm">
         {[
-          { label: "Expert", level: 3 },
-          { label: "Proficient", level: 2 },
-          { label: "Beginner", level: 1 }
+          { label: t('tech.expert'), level: 3 },
+          { label: t('tech.proficient'), level: 2 },
+          { label: t('tech.beginner'), level: 1 }
         ].map((item, index) => (
           <div class={`flex items-center gap-2 ${index > 0 ? 'md:border-l md:border-white/10 md:pl-4' : ''}`}>
             <div class="flex gap-0.5">
@@ -105,20 +123,17 @@ try {
 </section>
 
 <style>
-  /* Header Initial State */
   .tech-header {
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  /* Initial state of the card */
   .skill-card {
     transform: translateY(20px) scale(0.95);
     transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  /* Shared Revealed state */
   .tech-header.reveal,
   .skill-card.reveal {
     opacity: 1 !important;
@@ -136,40 +151,31 @@ try {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          const target = entry.target;
+          const target = entry.target as HTMLElement;
           
-          // Check if the intersecting element is the header
           if (target.classList.contains('tech-header')) {
             target.classList.add('reveal');
             observer.unobserve(target);
           }
-          // Check if the intersecting element is a skill card
           else if (target.classList.contains('skill-card')) {
-            // Add a slight delay based on the card's position to create a wave effect
             const index = cardIndexMap.get(target) ?? 0;
             setTimeout(() => {
               target.classList.add('reveal');
-            }, (index % 6) * 50); // Delay resets every row for a clean staggered look
+            }, (index % 6) * 50);
             
             observer.unobserve(target);
           }
         }
       });
     }, {
-      threshold: 0.1, // Trigger when 10% of the card is visible
-      rootMargin: '0px 0px -50px 0px' // Trigger slightly before it hits the viewport
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
     });
 
-    // Observe the header
     if (header) observer.observe(header);
-
-    // Observe all cards
     cards.forEach(card => observer.observe(card));
   }
 
-  // Runs on initial load
   revealSkills();
-
-  // Necessary for Astro View Transitions if you use them
   document.addEventListener('astro:after-swap', revealSkills);
 </script>

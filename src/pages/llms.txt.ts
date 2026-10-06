@@ -1,34 +1,8 @@
 import type { APIRoute } from 'astro';
-import localHomeData from '../data/home.json';
-import localCareerData from '../data/career.json';
-import localProjectsData from '../data/projects.json';
-import localTechData from '../data/tech.json';
+import { getPortfolioData } from '../utils/data';
 
 export const GET: APIRoute = async () => {
-  const isApiLive = import.meta.env.PROD;
-  const BASE_URL = import.meta.env.PUBLIC_API_BASE_URL;
-
-  let home = localHomeData;
-  let career = localCareerData;
-  let projects = localProjectsData;
-  let tech = localTechData;
-
-  if (isApiLive && BASE_URL) {
-    try {
-      const [homeRes, careerRes, projectsRes, techRes] = await Promise.all([
-        fetch(`${BASE_URL}/home`),
-        fetch(`${BASE_URL}/career`),
-        fetch(`${BASE_URL}/projects`),
-        fetch(`${BASE_URL}/tech`),
-      ]);
-      if (homeRes.ok) home = await homeRes.json();
-      if (careerRes.ok) career = await careerRes.json();
-      if (projectsRes.ok) projects = await projectsRes.json();
-      if (techRes.ok) tech = await techRes.json();
-    } catch (error) {
-      console.error('[llms.txt] API fetch failed, falling back to local JSON data', error);
-    }
-  }
+  const { home, career, projects, tech } = getPortfolioData('es');
 
   const siteUrl = (home.siteUrl || 'https://your-domain.com').replace(/\/$/, '');
 
@@ -62,12 +36,13 @@ export const GET: APIRoute = async () => {
 > ${home.description}
 
 ## Overview
-${home.name} is a ${home.jobTitle || 'Lead Software Engineer'}${home.location ? ` based in ${home.location}` : ''}. ${home.description}
+${home.name} is a ${home.jobTitle || 'Ingeniero de Software'}${home.location ? ` based in ${home.location}` : ''}. ${home.description}
 
 ## Key Information
 ${home.location ? `- **Location:** ${home.location}` : ''}
 ${home.availability ? `- **Availability:** ${home.availability}` : ''}
 - **Portfolio:** ${siteUrl}
+- **Multilingual Support:** Spanish (es) at ${siteUrl}/ and English (en) at ${siteUrl}/en/
 ${home.resumeUrl ? `- **Resume:** ${home.resumeUrl}` : ''}
 
 ## Technical Skills & Categories

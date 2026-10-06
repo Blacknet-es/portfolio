@@ -1,6 +1,25 @@
 ---
 import { Icon } from 'astro-icon/components';
-import localData from '../data/home.json';
+import { useTranslations } from '../i18n/utils';
+import { getPortfolioData } from '../utils/data';
+import type { Lang } from '../i18n/ui';
+
+interface Social {
+  name: string;
+  url: string;
+  icon: string;
+  label?: string;
+  showInContact?: boolean;
+}
+
+interface Props {
+  lang?: Lang;
+  data?: { socials: Social[] };
+}
+
+const { lang = 'es', data: propData } = Astro.props;
+const t = useTranslations(lang);
+const localData = propData || getPortfolioData(lang).home;
 ---
 
 <section id="contact" class="section-container">
@@ -8,17 +27,17 @@ import localData from '../data/home.json';
     <div class="space-y-12">
       <div class="contact-header opacity-0">
         <h2 class="text-3xl md:text-4xl font-heading font-bold text-maintext mb-2 flex items-center gap-4">
-          <span class="text-accent">/</span> Contact Me
+          <span class="text-accent">/</span> {t('contact.title')}
         </h2>
         <p class="text-subtext font-body text-sm max-w-md">
-          Feel free to reach out. I'm always open to discussing new projects and opportunities.
+          {t('contact.subtitle')}
         </p>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
         {localData.socials
-        .filter((social) => social.showInContact && social.url && social.url !== "#" && social.url !== "")
-        .map((social) => {
+        .filter((social: Social) => social.showInContact && social.url && social.url !== "#" && social.url !== "")
+        .map((social: Social) => {
           const isEmail = social.url.startsWith('mailto:');
           return (
             <a 
@@ -44,32 +63,28 @@ import localData from '../data/home.json';
       </div>
 
       <p class="contact-preferred opacity-0 text-center text-subtext text-xs font-body pt-2">
-        Preferred: <span class="text-accent/80">Email</span> or <span class="text-accent/80">LinkedIn</span> — I typically respond within 24 hours.
+        {t('contact.preferred')} <span class="text-accent/80">Email</span> {t('contact.or')} <span class="text-accent/80">LinkedIn</span> {t('contact.responseTime')}
       </p>
     </div>
   </div>
 </section>
 
 <style>
-  /* Header Initial State */
   .contact-header {
     transform: translateY(20px);
     transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  /* Cards Initial State */
   .contact-card {
     transform: translateY(20px) scale(0.95);
     transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  /* Preferred Text Initial State */
   .contact-preferred {
     transform: translateY(20px);
     transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  /* Shared Revealed State */
   .contact-header.reveal,
   .contact-card.reveal,
   .contact-preferred.reveal {

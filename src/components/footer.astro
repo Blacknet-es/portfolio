@@ -1,6 +1,17 @@
 ---
 import { Icon } from 'astro-icon/components';
-import localData from '../data/home.json';
+import { useTranslations } from '../i18n/utils';
+import { getPortfolioData } from '../utils/data';
+import type { Lang } from '../i18n/ui';
+
+interface Props {
+  lang?: Lang;
+  data?: { name: string };
+}
+
+const { lang = 'es', data: propData } = Astro.props;
+const t = useTranslations(lang);
+const localData = propData || getPortfolioData(lang).home;
 ---
 
 <footer class="section-container !pt-0 !pb-8">
@@ -11,7 +22,7 @@ import localData from '../data/home.json';
           {localData.name} © 2026
         </p>
         <div class="flex items-center flex-wrap justify-center gap-3 text-subtext text-xs font-body order-1 md:order-2">
-          <span>Built using </span>
+          <span>{t('footer.builtWith')} </span>
           <a
             href="https://astro.build/themes/details/career-portfolio-data-driven-astro-ssg/"
             target="_blank"
@@ -43,7 +54,6 @@ import localData from '../data/home.json';
     transform: translateY(0);
   }
 
-  /* Theme-based icon switching */
   :global([data-theme$="-dark"]) .astro-icon-light {
     display: none;
   }

@@ -1,0 +1,57 @@
+---
+import { languages, defaultLang, type Lang } from '../i18n/ui';
+
+interface Props {
+  lang?: Lang | string;
+}
+
+const { lang = defaultLang } = Astro.props;
+const currentLang = (lang in languages ? lang : defaultLang) as Lang;
+const langEntries = Object.entries(languages);
+---
+
+<div
+  class="lang-toggle-container flex items-center bg-accent/5 border border-accent/15 hover:border-accent/30 rounded-full p-0.5 backdrop-blur-md transition-all duration-300 shadow-sm"
+  role="group"
+  aria-label="Language selector"
+>
+  {
+    langEntries.map(([code, info]) => {
+      const isActive = code === currentLang;
+      const targetUrl = code === defaultLang ? '/' : `/${code}/`;
+      return (
+        <a
+          href={targetUrl}
+          class={`lang-btn px-2.5 py-1 text-[11px] font-mono font-bold rounded-full transition-all duration-300 ${
+            isActive
+              ? 'bg-accent text-background shadow-[0_0_12px_color-mix(in_srgb,var(--color-accent)_45%,transparent)] scale-105'
+              : 'text-subtext hover:text-maintext hover:bg-accent/10'
+          }`}
+          aria-label={`Switch to ${info.name}`}
+          data-lang-target={code}
+        >
+          {info.label || code.toUpperCase()}
+        </a>
+      );
+    })
+  }
+</div>
+
+<script>
+  function setupLangSwitchPreserveHash() {
+    const buttons = document.querySelectorAll<HTMLAnchorElement>('[data-lang-target]');
+    buttons.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        const hash = window.location.hash;
+        if (hash) {
+          e.preventDefault();
+          const targetUrl = btn.getAttribute('href') || '/';
+          window.location.href = `${targetUrl}${hash}`;
+        }
+      });
+    });
+  }
+
+  setupLangSwitchPreserveHash();
+  document.addEventListener('astro:after-swap', setupLangSwitchPreserveHash);
+</script>

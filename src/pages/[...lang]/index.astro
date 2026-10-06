@@ -1,0 +1,93 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Nav from "../../components/nav.astro";
+import Home from "../../components/home.astro";
+import Tech from "../../components/tech.astro";
+import Projects from "../../components/projects.astro";
+import Contact from "../../components/contact.astro";
+import Footer from "../../components/footer.astro";
+import Career from "../../components/career.astro";
+import { getPortfolioData } from "../../utils/data";
+import { languages, defaultLang, type Lang } from "../../i18n/ui";
+
+export function getStaticPaths() {
+  return Object.keys(languages).map((langCode) => ({
+    params: { lang: langCode === defaultLang ? undefined : langCode },
+  }));
+}
+
+interface Social {
+  name: string;
+  url: string;
+  icon: string;
+  showInContact: boolean;
+}
+
+interface ProfileData {
+  name: string;
+  webpageTitle: string;
+  description?: string;
+  jobTitle?: string;
+  keywords?: string;
+  siteUrl?: string;
+  twitterHandle?: string;
+  ogImageUrl?: string;
+  lang?: string;
+  socials: Social[];
+}
+
+const { lang } = Astro.params;
+const currentLang = (lang && lang in languages ? lang : defaultLang) as Lang;
+
+const portfolioData = getPortfolioData(currentLang);
+const isApiLive = import.meta.env.PROD;
+const BASE_URL = import.meta.env.PUBLIC_API_BASE_URL;
+
+let homeData: ProfileData;
+
+if (isApiLive && BASE_URL) {
+  try {
+    const response = await fetch(`${BASE_URL}/home?lang=${currentLang}`);
+    if (!response.ok) throw new Error('Network response was not ok');
+    homeData = await response.json();
+  } catch (error) {
+    console.error("API Fetch failed, falling back to mock data", error);
+    homeData = portfolioData.home as ProfileData;
+  }
+} else {
+  homeData = portfolioData.home as ProfileData;
+}
+
+const {
+  name,
+  webpageTitle,
+  description,
+  jobTitle,
+  keywords,
+  siteUrl,
+  twitterHandle,
+  ogImageUrl,
+  socials,
+} = homeData;
+---
+
+<Layout
+  title={webpageTitle}
+  personName={name}
+  description={description}
+  jobTitle={jobTitle}
+  keywords={keywords}
+  siteUrl={siteUrl}
+  twitterHandle={twitterHandle}
+  ogImageUrl={ogImageUrl}
+  lang={currentLang}
+  socials={socials}
+>
+  <Nav lang={currentLang} />
+  <Home lang={currentLang} data={homeData} />
+  <Career lang={currentLang} data={portfolioData.career} />
+  <Projects lang={currentLang} data={portfolioData.projects} />
+  <Tech lang={currentLang} data={portfolioData.tech} />
+  <Contact lang={currentLang} data={homeData} />
+  <Footer lang={currentLang} data={homeData} />
+</Layout>

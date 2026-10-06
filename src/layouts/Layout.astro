@@ -1,6 +1,7 @@
 ---
-import '../styles/global.css'
+import '../styles/global.css';
 import ThemeScript from '../components/theme-script.astro';
+import { languages, defaultLang, type Lang } from '../i18n/ui';
 
 interface Props {
   title: string;
@@ -11,7 +12,7 @@ interface Props {
   twitterHandle?: string;
   personName?: string;
   jobTitle?: string;
-  lang?: string;
+  lang?: Lang | string;
   socials?: { name: string; url: string }[];
 }
 
@@ -24,16 +25,18 @@ const {
   twitterHandle = '',
   personName = '',
   jobTitle = '',
-  lang = 'en',
+  lang = defaultLang,
   socials = [],
 } = Astro.props;
 
-
 // Canonical & OG absolute URLs
 const resolvedSiteUrl = siteUrl || Astro.site?.toString() || '';
-const canonicalUrl = resolvedSiteUrl 
-    ? resolvedSiteUrl.replace(/\/$/, '') + '/' 
+const baseDomain = resolvedSiteUrl ? resolvedSiteUrl.replace(/\/$/, '') : (Astro.url.origin || '');
+
+const canonicalUrl = baseDomain
+    ? `${baseDomain}${Astro.url.pathname}`
     : Astro.url.href;
+
 const ogImage = ogImageUrl
     ? new URL(ogImageUrl, resolvedSiteUrl || Astro.url.origin).href
     : '';
@@ -68,8 +71,7 @@ const jsonLd = {
   ]
 };
 
-// 'en' -> 'en_US'
-const ogLocale = lang.includes('_') ? lang : `${lang}_${lang.toUpperCase()}`;
+const ogLocale = lang === 'es' ? 'es_ES' : (lang === 'en' ? 'en_US' : (lang === 'fr' ? 'fr_FR' : (lang.includes('_') ? lang : `${lang}_${lang.toUpperCase()}`)));
 ---
 
 <!doctype html>
@@ -88,6 +90,17 @@ const ogLocale = lang.includes('_') ? lang : `${lang}_${lang.toUpperCase()}`;
     {personName && <meta name="author" content={personName} />}
     <meta name="robots" content="index, follow" />
     {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+
+    <!-- HREFLANG FOR MULTILINGUAL SEO DYNAMICALLY GENERATED FROM UI.TS -->
+    {baseDomain && (
+      <>
+        {Object.keys(languages).map((code) => {
+          const url = code === defaultLang ? `${baseDomain}/` : `${baseDomain}/${code}/`;
+          return <link rel="alternate" hreflang={code} href={url} />;
+        })}
+        <link rel="alternate" hreflang="x-default" href={`${baseDomain}/`} />
+      </>
+    )}
 
     <!-- OPEN GRAPH -->
     <meta property="og:type" content="website" />

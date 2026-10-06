@@ -1,5 +1,8 @@
 ---
 import { Icon } from 'astro-icon/components';
+import { useTranslations } from '../i18n/utils';
+import type { Lang } from '../i18n/ui';
+
 interface Props {
   item: {
     period: string;
@@ -11,15 +14,14 @@ interface Props {
     skills: string[];
   };
   variant: 'mobile' | 'desktop-left' | 'desktop-right';
+  lang?: Lang;
 }
 
-const { item, variant } = Astro.props;
+const { item, variant, lang = 'es' } = Astro.props;
+const t = useTranslations(lang);
 
-const isMobile = variant === 'mobile';
 const isLeft = variant === 'desktop-left';
-
 const alignmentClass = isLeft ? "text-right" : "";
-
 const skillContainerClasses = `flex flex-wrap gap-2 ${isLeft ? 'justify-end' : ''}`;
 
 const typeColors: Record<string, string> = {
@@ -29,16 +31,20 @@ const typeColors: Record<string, string> = {
 };
 const typeBadgeClass = typeColors[item.type] ?? 'text-accent bg-accent/10 border-accent/20';
 
-// Header row flex direction: left-side cards are text-right, so reverse the row
+const typeLabelMap: Record<string, string> = {
+  'Full time job': t('career.badge.fullTime'),
+  'Internship':    t('career.badge.internship'),
+  'Student':       t('career.badge.student'),
+};
+const displayedType = typeLabelMap[item.type] || item.type;
 const headerRowClass = isLeft ? 'flex-row-reverse' : 'flex-row';
 ---
 
 <div class={`bg-accent/5 border border-accent/10 p-4 md:p-6 rounded-2xl hover:border-accent/40 hover:shadow-[0_0_30px_color-mix(in_srgb,var(--color-accent)_10%,transparent)] hover:scale-[1.01] transition-all duration-300 group ${alignmentClass}`}>
-  {/* Period + type badge row */}
   <div class={`flex items-center gap-2 mb-1 ${headerRowClass}`}>
     <span class="font-mono text-xs tracking-widest uppercase text-accent/75">{item.period}</span>
     <span class={`inline-block text-[10px] uppercase tracking-widest font-bold px-2 py-0.5 rounded-full border whitespace-nowrap ${typeBadgeClass}`}>
-      {item.type}
+      {displayedType}
     </span>
   </div>
   <h3 class="text-xl font-heading font-bold text-maintext mt-1">{item.role}</h3>
